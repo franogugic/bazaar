@@ -4,7 +4,7 @@ An invariant is a rule that must always be true, even after a crash or when many
 
 ## 1. Unique accounts
 
-**Always true:** no two accounts have the same username, email or phone number.
+**Always true:** no two accounts have the same username or email.
 
 **Check:** for each field, group the accounts by its value and look for groups with more than one account. The result must be zero rows.
 
