@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# .NET build output
+bin/
+obj/
+
+# IDE files
+.idea/
+.vs/
+*.user
+
+# local environment with real passwords (use .env.example as a template)
+.env
