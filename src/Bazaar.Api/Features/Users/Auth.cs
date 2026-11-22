@@ -8,7 +8,7 @@ using JwtRegisteredClaimNames = System.IdentityModel.Tokens.Jwt.JwtRegisteredCla
 
 namespace Bazaar.Api.Features.Users;
 
-public static class SignUp
+public static class Auth
 {
     private const int UsernameMinLength = 4;
     private const int UsernameMaxLength = 30;
