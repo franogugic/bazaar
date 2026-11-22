@@ -20,7 +20,7 @@ public static class Listing
                                             """;
 
     private const string getListingSql = """
-                                         SELECT l.id, l.title, l.description, l.price, l.quantity, u.username, u.country, u.city
+                                         SELECT l.id, l.title, l.description, l.price, l.quantity, l.seller_id, u.username, u.country, u.city
                                          FROM Listings l
                                          JOIN Users u ON l.seller_id = u.id
                                          WHERE l.id = @Id

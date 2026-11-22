@@ -1,4 +1,5 @@
 using System.Text;
+using Bazaar.Api.Features.Follows;
 using Bazaar.Api.Features.Listings;
 using Bazaar.Api.Features.Users;
 using DbUp;
@@ -65,6 +66,9 @@ app.MapMe();
 //listings
 app.MapCreateListing();
 app.MapGetListing();
+
+//follows
+app.MapFollowUser();
 
 app.UseAuthentication();
 app.UseAuthorization();
