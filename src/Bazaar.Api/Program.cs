@@ -1,4 +1,7 @@
 using System.Text;
+using Bazaar.Api.Features.Feeds;
+using Bazaar.Api.Features.Follows;
+using Bazaar.Api.Features.Listings;
 using Bazaar.Api.Features.Users;
 using DbUp;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -56,9 +59,20 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+//auth
 app.MapSignUp();
 app.MapLogin();
 app.MapMe();
+
+//listings
+app.MapCreateListing();
+app.MapGetListing();
+
+//follows
+app.MapFollowUser();
+
+//feeds
+app.GetFeeds();
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -67,4 +81,5 @@ app.UseHttpsRedirection();
 
 
 app.Run();
+
 
