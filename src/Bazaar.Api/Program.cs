@@ -1,4 +1,5 @@
 using System.Text;
+using Bazaar.Api.Features.Feeds;
 using Bazaar.Api.Features.Follows;
 using Bazaar.Api.Features.Listings;
 using Bazaar.Api.Features.Users;
@@ -69,6 +70,9 @@ app.MapGetListing();
 
 //follows
 app.MapFollowUser();
+
+//feeds
+app.GetFeeds();
 
 app.UseAuthentication();
 app.UseAuthorization();
